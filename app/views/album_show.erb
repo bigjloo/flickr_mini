@@ -1,0 +1,17 @@
+<div>
+  <h3>Album ID: <%= @album.id %></h3>
+  Title:
+
+  <form action="/album/<%= @album.id %>" enctype="multipart/form-data" method="post">
+    <input type= "text" name= "title"><br>
+    <input type="file" name="photo[filename]" accept="image/*"><br>
+    <input type="submit">
+  </form>
+    <% @album.photos.each do |photo| %>
+      <%= photo.title  %><br>
+     <img src="<%= photo.filename %>" ><br>
+      <%= %>
+    <% end %>
+</div>
+
+

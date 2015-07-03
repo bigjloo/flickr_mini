@@ -1,0 +1,14 @@
+<div class= 'container'>
+  <h2>Welcome <%= current_user.name %></h2>
+  <section>
+    <h3>Albums</h3>
+    <% current_user.albums.each do |album| %>
+      // photo here //<br>
+      <a href="/album/<%= album.id %>"><%= album.name %><a><br>
+    <% end %>
+  </section>
+  <a href= "/"><h3>Main</h3></a>
+  <form action= "/session/logout" method= "get">
+    <input type= "submit" value= "Log out">
+  </form>
+</div>

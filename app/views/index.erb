@@ -1,0 +1,15 @@
+<div class="container">
+  <h2>This is flickr Jr.</h2>
+  <% if logged_in? %>
+    <form action= "/session/logout" method= "get">
+      <input type= "submit" value= "Log out">
+    </form>
+  <% else %>
+    <form action= "/user/login" method= "get">
+      <input type= "submit" value= "Post photos!" >
+    </form>
+  <% end %>
+  <section>
+    //Latest photos display//
+  </section>
+</div>

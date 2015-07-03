@@ -1,0 +1,25 @@
+<div class= 'container'>
+  <h3>Log In</h3>
+
+  <form action= "/session/login" method= "post">
+  <span>Username: </span><input type= "text" name= "name" placeholder= "Username"><br>
+  <span>Password: </span><input type= "text" name= "password" placeholder= "Password"><br>
+  <input type= "submit" value= "Login">
+  </form>
+  <% if !@error.nil? %>
+    <b><%= @error %></b><br>
+  <% end %>
+
+  <h3>Create Account</h3>
+  <form action= "/user" method= "post">
+  <span>Username: </span><input type= "text" name= "user[name]" placeholder= "Username"><br>
+  <span>Password: </span><input type= "text" name= "user[password]" placeholder= "Password"><br>
+  <input type= "submit" value= "Sign Up">
+  </form><br>
+  <% if !@success.nil? %>
+    <b><%= @success %></b><br>
+  <% end %>
+  <% if !@error.nil? %>
+    <b><%= @error %></b><br>
+  <% end %>
+</div>
